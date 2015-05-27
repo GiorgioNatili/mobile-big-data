@@ -1,12 +1,14 @@
 package io.webplatform.helloenigma;
 
-import io.webplatform.helloenigma.dummy.DummyContent;
 import android.app.Activity;
-import android.app.ListFragment;
 import android.os.Bundle;
+import android.app.ListFragment;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+
+
+import io.webplatform.helloenigma.dummy.DummyContent;
 
 /**
  * A list fragment representing a list of Items. This fragment

@@ -8,6 +8,8 @@
 
 import UIKit
 import CoreData
+import SwiftyJSON
+import Alamofire
 
 class MasterViewController: UITableViewController, NSFetchedResultsControllerDelegate {
 
@@ -34,6 +36,19 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         let controllers = split.viewControllers
         self.detailViewController = controllers[controllers.count-1].topViewController as? DetailViewController
     }
+    
+    Alamofire.request(.GET, "https://api.enigma.io/v2/data/eb47e3e8a62895c55cc6b6b16a1490dc/us.gov.whitehouse.visitor-list/search/john/select/namefull,appt_made_date/limit/20/")
+             .response { (request, response, data, error) in
+                  println(request)
+                  println(response)
+                  println(data)
+                  println(error)
+                  let json = JSON(data!)
+              for (key: String, subJson: JSON) in json {
+                println(key)
+              }
+              }
+    
   }
 
   override func didReceiveMemoryWarning() {

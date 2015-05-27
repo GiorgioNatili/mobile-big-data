@@ -1,9 +1,9 @@
 package io.webplatform.helloenigma;
 
-import io.webplatform.helloenigma.R;
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.app.Activity;
+
 import android.view.MenuItem;
 
 
